@@ -1,7 +1,6 @@
 const app = require("./App");
 const useConfig = require("./configs/app");
 
-const app = express();
 const { ZONE, PORT } = useConfig;
 
 if (ZONE === "production") {
