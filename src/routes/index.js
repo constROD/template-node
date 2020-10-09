@@ -1,6 +1,8 @@
 const { createRouter } = require("../utils/routes");
 const TestRoutes = require("./Test");
 
-module.exports = {
+const useRoutes = () => ({
   test: createRouter("/test", TestRoutes),
-};
+});
+
+module.exports = useRoutes;

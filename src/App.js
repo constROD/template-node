@@ -1,8 +1,16 @@
-const app = require("./App");
-const useConfig = require("./configs/app");
+const express = require("express");
+const useRoutes = require("./routes");
 
 const app = express();
-const { ZONE, PORT } = useConfig;
+
+// Routes
+const { test } = useRoutes();
+
+// Middlewares
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+// Routes
+app.use(test.path, test.routes);
 
 if (ZONE === "production") {
   const sslCertificates = {

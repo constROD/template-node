@@ -1,6 +1,9 @@
-require("dotenv").config();
+const dotenv = require("dotenv");
+dotenv.config();
 
-module.exports = {
+const useConfig = {
   ZONE: process.env.ZONE,
   PORT: process.env.PORT,
 };
+
+module.exports = useConfig;
