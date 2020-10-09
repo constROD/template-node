@@ -1,0 +1,17 @@
+{
+  "name": "template-node",
+  "version": "1.0.0",
+  "description": "Template Node",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "Rodrick Alcantara",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
