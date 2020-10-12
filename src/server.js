@@ -1,5 +1,5 @@
 const app = require("./App");
-const useConfig = require("./configs/app");
+const useConfig = require("./shared/configs/app");
 
 const { ZONE, PORT } = useConfig;
 
