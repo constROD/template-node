@@ -1,7 +1,7 @@
 const app = require("./App");
-const useConfig = require("./shared/configs/app");
+const CONFIG = require("./shared/configs/app");
 
-const { ZONE, PORT } = useConfig;
+const { ZONE, PORT } = CONFIG;
 
 if (ZONE === "production") {
   const sslCertificates = {

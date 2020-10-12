@@ -1,8 +1,6 @@
 const { createRouter } = require("../shared/utils/routes");
 const TestRoutes = require("./Test");
 
-const useRoutes = () => ({
+module.exports = {
   test: createRouter("/test", TestRoutes),
-});
-
-module.exports = useRoutes;
+}
