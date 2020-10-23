@@ -2,20 +2,20 @@ const express = require("express");
 
 const Router = express.Router();
 
-Router.get("/", (req, res) => {
-  res.send("GET");
+Router.get("/", async (req, res) => {
+  res.status(200).json({ method: "GET", params: req.query });
 });
 
-Router.post("/", (req, res) => {
-  res.send("POST");
+Router.post("/", async (req, res) => {
+  res.status(200).json({ method: "POST", params: req.query });
 });
 
-Router.put("/", (req, res) => {
-  res.send("PUT");
+Router.put("/", async (req, res) => {
+  res.status(200).json({ method: "PUT", params: req.query });
 });
 
-Router.delete("/", (req, res) => {
-  res.send("DELETE");
+Router.delete("/", async (req, res) => {
+  res.status(200).json({ method: "DELETE", params: req.query });
 });
 
 module.exports = Router;

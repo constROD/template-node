@@ -1,8 +1,8 @@
 module.exports = {
-  createRouter: (path, routes) => {
+  createRouter: (url, controller) => {
     return {
-      path,
-      routes,
+      url,
+      controller,
     };
   },
 };

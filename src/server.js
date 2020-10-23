@@ -1,9 +1,7 @@
 const app = require("./App");
-const CONFIG = require("./shared/configs/app");
+const { APP_ZONE, APP_PORT } = require("./shared/configs/app");
 
-const { ZONE, PORT } = CONFIG;
-
-if (ZONE === "production") {
+if (APP_ZONE === "production") {
   const sslCertificates = {
     key: fs.readFileSync("/path/to/key"),
     cert: fs.readFileSync("/path/to/cert"),
@@ -12,7 +10,7 @@ if (ZONE === "production") {
 
   https
     .createServer(sslCertificates, app)
-    .listen(PORT, () => console.log("Listening on port: " + PORT));
+    .listen(APP_PORT, () => console.log("Listening on port: " + APP_PORT));
 } else {
-  app.listen(PORT, () => console.log("Listening on port: " + PORT));
+  app.listen(APP_PORT, () => console.log("Listening on port: " + APP_PORT));
 }
