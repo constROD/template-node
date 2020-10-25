@@ -1,10 +1,10 @@
 const express = require("express");
-const ROUTES = require("./routes");
+const { rootRoutes } = require("./routes");
 
 const app = express();
 
 // Routes
-const { test } = ROUTES;
+const { test } = rootRoutes;
 
 // Middlewares
 app.use(express.json());
