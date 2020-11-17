@@ -1,21 +1,12 @@
 const express = require("express");
+const { useTestController } = require("../controllers/Test");
 
 const Router = express.Router();
+const { getTests, createTest, updateTest, deleteTest } = useTestController();
 
-Router.get("/", async (req, res) => {
-  res.status(200).json({ method: "GET", params: req.query });
-});
-
-Router.post("/", async (req, res) => {
-  res.status(200).json({ method: "POST", params: req.query });
-});
-
-Router.put("/", async (req, res) => {
-  res.status(200).json({ method: "PUT", params: req.query });
-});
-
-Router.delete("/", async (req, res) => {
-  res.status(200).json({ method: "DELETE", params: req.query });
-});
+Router.get("/", getTests);
+Router.post("/", createTest);
+Router.put("/", updateTest);
+Router.delete("/", deleteTest);
 
 module.exports = Router;

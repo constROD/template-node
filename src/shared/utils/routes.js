@@ -1,8 +1,13 @@
-module.exports = {
-  createRouter: (url, controller) => {
-    return {
-      url,
-      controller,
-    };
-  },
+module.exports.createRoute = (path, routers) => {
+  return {
+    path,
+    routers,
+  };
+};
+
+module.exports.useCreateRoute = (path, routers) => {
+  return {
+    path,
+    routers,
+  };
 };
